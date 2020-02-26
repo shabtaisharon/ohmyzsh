@@ -81,8 +81,9 @@ alias gcf='git config --list'
 alias gcl='git clone --recurse-submodules'
 alias gclean='git clean -id'
 alias gpristine='git reset --hard && git clean -dffx'
-alias gcm='git checkout $(git_main_branch)'
-alias gcd='git checkout develop'
+alias gcm='git checkout master'
+alias gcr='git checkout release_2_0_0'
+alias gcd='git checkout dev'
 alias gcmsg='git commit -m'
 alias gco='git checkout'
 alias gcount='git shortlog -sn'
@@ -250,6 +251,8 @@ alias gst='git status'
 is-at-least 2.13 "$git_version" \
   && alias gsta='git stash push' \
   || alias gsta='git stash save'
+
+alias ggr='git pull -r upstream $(git_current_branch)'
 
 alias gstaa='git stash apply'
 alias gstc='git stash clear'
